@@ -10,7 +10,8 @@ So i can forward the "open" message from: phone -> this app -> raspberry pi on l
 
 ### Flow
 
-1. I have an app on my phone that is able to publish on the topic by: 
+1. I have an [scriptable app](https://scriptable.app/)
+     on my phone that is able to publish on the topic by: 
 
 ```js
 let req = new Request("https://ntfy.sh/<topic>");
