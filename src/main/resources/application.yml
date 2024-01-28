@@ -1,0 +1,12 @@
+ntfy:
+  sh:
+    baseurl: https://ntfy.sh
+    topic: <topic>/raw
+
+schedule:
+  morning: "0 0 8 * * ?"    # Run at 8:00 AM every day
+  evening: "0 0 18 * * ?" # Run at 6:00 PM every day
+
+url:
+  to:
+    hatch: http://192.168.1.224/open_hatch
