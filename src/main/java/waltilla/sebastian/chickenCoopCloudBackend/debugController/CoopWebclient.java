@@ -1,4 +1,4 @@
-package waltilla.sebastian.chickenCoopCloudBackend.controller;
+package waltilla.sebastian.chickenCoopCloudBackend.debugController;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
