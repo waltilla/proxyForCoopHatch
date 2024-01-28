@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 import waltilla.sebastian.chickenCoopCloudBackend.hatchController.WebclientForHatchControl;
 
 // TODO: remove when development is done.
+
 @RestController
 public class CoopWebclient {
     WebclientForHatchControl webClient;

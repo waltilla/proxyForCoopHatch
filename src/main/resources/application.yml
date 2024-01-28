@@ -9,4 +9,4 @@ schedule:
 
 url:
   to:
-    hatch: http://192.168.1.224/open_hatch
+    hatch: http://192.168.1.224/
