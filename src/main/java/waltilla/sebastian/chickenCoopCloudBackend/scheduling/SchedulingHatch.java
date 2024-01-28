@@ -1,15 +1,15 @@
-package waltilla.sebastian.chickenCoopCloudBackend.scheduler;
+package waltilla.sebastian.chickenCoopCloudBackend.scheduling;
 
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import waltilla.sebastian.chickenCoopCloudBackend.ntfyWebClient.WebclientForHatchControl;
 
 @Component
-public class Sceduler {
+public class SchedulingHatch {
 
     WebclientForHatchControl controller;
 
-    public Sceduler(WebclientForHatchControl controller) {
+    public SchedulingHatch(WebclientForHatchControl controller) {
         this.controller = controller;
     }
 
