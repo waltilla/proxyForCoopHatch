@@ -12,7 +12,7 @@ So i can forward the "open" message from: phone -> this app -> raspberry pi on l
 
 1. I have an app on my phone that is able to publish on the topic by: 
 
-```
+```js
 let req = new Request("https://ntfy.sh/<topic>");
 req.method = "post";
 req.body = "open_hatch" _OR_ "cloas_hatch";
