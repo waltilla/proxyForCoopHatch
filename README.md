@@ -16,7 +16,7 @@ So i can forward the "open" message from: phone -> this app -> raspberry pi on l
 ```js
 let req = new Request("https://ntfy.sh/<topic>");
 req.method = "post";
-req.body = "open_hatch" _OR_ "cloas_hatch";
+req.body = "open_hatch" _OR_ "close_hatch";
 req.load();
 ```
 
