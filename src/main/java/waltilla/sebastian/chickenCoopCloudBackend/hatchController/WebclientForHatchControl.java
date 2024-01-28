@@ -21,7 +21,7 @@ public class WebclientForHatchControl {
 
     public void sendOpenHatch() {
         webClient.post()
-                .uri(urlToCoopHatch)
+                .uri(urlToCoopHatch + OPEN_HATCH_MESSAGE)
                 .bodyValue(OPEN_HATCH_MESSAGE)
                 .retrieve()
                 .bodyToMono(String.class)
@@ -30,7 +30,7 @@ public class WebclientForHatchControl {
 
     public void sendCloseHatch() {
         webClient.post()
-                .uri(urlToCoopHatch)
+                .uri(urlToCoopHatch + CLOSE_HATCH_MESSAGE)
                 .bodyValue(CLOSE_HATCH_MESSAGE)
                 .retrieve()
                 .bodyToMono(String.class)

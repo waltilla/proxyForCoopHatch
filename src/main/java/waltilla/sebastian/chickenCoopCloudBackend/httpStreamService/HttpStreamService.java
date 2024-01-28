@@ -10,6 +10,7 @@ import waltilla.sebastian.chickenCoopCloudBackend.hatchController.WebclientForHa
 public class HttpStreamService {
 
     private String topic;
+
     private WebClient webClient;
 
     private WebclientForHatchControl controller;
