@@ -1,4 +1,4 @@
-package waltilla.sebastian.chickenCoopCloudBackend.ntfyWebClient;
+package waltilla.sebastian.chickenCoopCloudBackend.hatchController;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

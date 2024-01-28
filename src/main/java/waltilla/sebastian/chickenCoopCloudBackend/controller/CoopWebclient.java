@@ -3,8 +3,9 @@ package waltilla.sebastian.chickenCoopCloudBackend.controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
-import waltilla.sebastian.chickenCoopCloudBackend.ntfyWebClient.WebclientForHatchControl;
+import waltilla.sebastian.chickenCoopCloudBackend.hatchController.WebclientForHatchControl;
 
+// TODO: remove when development is done.
 @RestController
 public class CoopWebclient {
     WebclientForHatchControl webClient;

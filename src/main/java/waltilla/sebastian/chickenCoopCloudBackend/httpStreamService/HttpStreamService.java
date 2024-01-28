@@ -1,10 +1,10 @@
-package waltilla.sebastian.chickenCoopCloudBackend.NtfyWebSocket;
+package waltilla.sebastian.chickenCoopCloudBackend.httpStreamService;
 
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
-import waltilla.sebastian.chickenCoopCloudBackend.ntfyWebClient.WebclientForHatchControl;
+import waltilla.sebastian.chickenCoopCloudBackend.hatchController.WebclientForHatchControl;
 
 @Service
 public class HttpStreamService {

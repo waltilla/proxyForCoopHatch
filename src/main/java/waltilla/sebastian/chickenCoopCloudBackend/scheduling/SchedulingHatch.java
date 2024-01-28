@@ -2,7 +2,7 @@ package waltilla.sebastian.chickenCoopCloudBackend.scheduling;
 
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
-import waltilla.sebastian.chickenCoopCloudBackend.ntfyWebClient.WebclientForHatchControl;
+import waltilla.sebastian.chickenCoopCloudBackend.hatchController.WebclientForHatchControl;
 
 @Component
 public class SchedulingHatch {
