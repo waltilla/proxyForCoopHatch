@@ -4,8 +4,8 @@ ntfy:
     topic: <topic>/raw
 
 schedule:
-  morning: "0 0 8 * * ?"    # Run at 8:00 AM every day
-  evening: "0 0 18 * * ?" # Run at 6:00 PM every day
+  morning: "0 30 7 * * *"   # Run at 7:30 AM every day
+  evening: "0 0 18 * * *"   # Run at 6:00 PM every day
 
 url:
   to:
