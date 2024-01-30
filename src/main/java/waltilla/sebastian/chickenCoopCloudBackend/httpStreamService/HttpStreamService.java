@@ -1,11 +1,15 @@
 package waltilla.sebastian.chickenCoopCloudBackend.httpStreamService;
 
 import jakarta.annotation.PostConstruct;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import waltilla.sebastian.chickenCoopCloudBackend.hatchController.WebclientForHatchControl;
 
+import java.time.LocalDateTime;
+
+@Slf4j
 @Service
 public class HttpStreamService {
 
@@ -23,6 +27,7 @@ public class HttpStreamService {
         this.controller = controller;
     }
 
+    //https://docs.ntfy.sh/subscribe/api/#http-stream
     @PostConstruct
     public void run() {
         webClient.get()
@@ -30,7 +35,7 @@ public class HttpStreamService {
                 .retrieve()
                 .bodyToFlux(String.class)
                 .subscribe(data -> {
-                    System.out.println(data);
+                    log.info(LocalDateTime.now() + " " + data);
                     switch (data) {
                         case "open_hatch" -> {controller.sendOpenHatch();}
                         case "close_hatch" -> {controller.sendCloseHatch();}

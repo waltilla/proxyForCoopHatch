@@ -5,7 +5,8 @@ I have a chicken coop with an "automatic" hatch powered by an raspberry pi and s
 It can be open by sending a request on my local network.  
 But i need to be able to open it when away from the local network soo..  
 The easiest solution for this was to set up a topic on: https://ntfy.sh/.  
-So i can forward the "open" message from: phone -> this app -> raspberry pi on local network
+So i can forward the "open" message from:  
+Phone -> topic <- this app -> raspberry pi on local network
     
 
 ### Flow
