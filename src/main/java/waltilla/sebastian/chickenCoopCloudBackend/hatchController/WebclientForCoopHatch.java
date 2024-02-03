@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 
 @Component
-public class WebclientForHatchControl {
+public class WebclientForCoopHatch {
 
     private String urlToCoopHatch;
     private final WebClient webClient;
@@ -14,7 +14,7 @@ public class WebclientForHatchControl {
     private final String CLOSE_HATCH_MESSAGE = "close_hatch";
 
     @Autowired
-    public WebclientForHatchControl(@Value("${url.to.hatch}") String urlToCoopHatch) {
+    public WebclientForCoopHatch(@Value("${url.to.hatch}") String urlToCoopHatch) {
         this.urlToCoopHatch = urlToCoopHatch;
         this.webClient = WebClient.create();
     }

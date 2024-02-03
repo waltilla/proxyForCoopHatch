@@ -5,7 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
-import waltilla.sebastian.chickenCoopCloudBackend.hatchController.WebclientForHatchControl;
+import waltilla.sebastian.chickenCoopCloudBackend.hatchController.WebclientForCoopHatch;
 
 import java.time.LocalDateTime;
 
@@ -17,11 +17,11 @@ public class HttpStreamService {
 
     private WebClient webClient;
 
-    private WebclientForHatchControl controller;
+    private WebclientForCoopHatch controller;
 
     public HttpStreamService(@Value("${ntfy.sh.baseurl}") String baseUrl,
                              @Value("${ntfy.sh.topic}") String topic,
-                             WebclientForHatchControl controller) {
+                             WebclientForCoopHatch controller) {
         this.topic = topic;
         this.webClient = WebClient.builder().baseUrl(baseUrl).build();
         this.controller = controller;
@@ -35,7 +35,7 @@ public class HttpStreamService {
                 .retrieve()
                 .bodyToFlux(String.class)
                 .subscribe(data -> {
-                    log.info(LocalDateTime.now() + " " + data);
+                    if(!data.isBlank()) log.info(LocalDateTime.now() + " " + data);
                     switch (data) {
                         case "open_hatch" -> {controller.sendOpenHatch();}
                         case "close_hatch" -> {controller.sendCloseHatch();}

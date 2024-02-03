@@ -3,7 +3,7 @@ package waltilla.sebastian.chickenCoopCloudBackend.scheduling;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
-import waltilla.sebastian.chickenCoopCloudBackend.hatchController.WebclientForHatchControl;
+import waltilla.sebastian.chickenCoopCloudBackend.hatchController.WebclientForCoopHatch;
 
 import java.time.LocalDateTime;
 
@@ -11,9 +11,9 @@ import java.time.LocalDateTime;
 @Component
 public class SchedulingHatch {
 
-    WebclientForHatchControl controller;
+    WebclientForCoopHatch controller;
 
-    public SchedulingHatch(WebclientForHatchControl controller) {
+    public SchedulingHatch(WebclientForCoopHatch controller) {
         this.controller = controller;
     }
 

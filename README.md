@@ -7,9 +7,13 @@ But i need to be able to open it when away from the local network soo..
 The easiest solution for this was to set up a topic on: https://ntfy.sh/.  
 So i can forward the "open" message from:  
 Phone -> topic <- this app -> raspberry pi on local network
-    
+
+
 
 ### Flow
+
+
+![App flow as picture](src/main/resources/asd.bmp)
 
 1. I have an [scriptable app](https://scriptable.app/)
      on my phone that is able to publish on the topic by: 
