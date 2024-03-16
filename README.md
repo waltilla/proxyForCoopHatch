@@ -40,6 +40,7 @@ Since it is nice with automation, a scheduler is added to open and close in the 
 -Dntfy.sh.topic=<topic>/raw
 ```
 #### run as container
+number = 192.169.1.<number> 
 
 docker  build . -t coop
-docker run -e TOPIC="<topic>" lastthree="<lastdigitsinip>" coop
+sudo docker run -e TOPIC="<topic>/raw" -e LASTTHREE="<number>" coop
