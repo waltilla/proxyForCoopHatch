@@ -35,7 +35,11 @@ Since it is nice with automation, a scheduler is added to open and close in the 
 
 ### Run!
 
-To be able to run localy, this needs to be set: 
+####To be able to run localy, this needs to be set: 
 ```
 -Dntfy.sh.topic=<topic>/raw
 ```
+#### run as container
+
+docker  build . -t coop
+docker run -e TOPIC="<topic>" lastthree="<lastdigitsinip>" coop
